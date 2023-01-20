@@ -18,6 +18,8 @@
 		1F9D66AF297ABEAF000B2035 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1F9D66AE297ABEAF000B2035 /* Alamofire */; };
 		1F9D66B1297ABEBA000B2035 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D66B0297ABEBA000B2035 /* BaseService.swift */; };
 		1F9D66B3297ABEEC000B2035 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D66B2297ABEEC000B2035 /* ApiManager.swift */; };
+		1F9D66B6297AC18F000B2035 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D66B5297AC18F000B2035 /* MainTabBarViewController.swift */; };
+		1F9D66B9297AC2C9000B2035 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D66B8297AC2C9000B2035 /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		1F9D66A7297ABBBC000B2035 /* DiscoverHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverHeaderView.swift; sourceTree = "<group>"; };
 		1F9D66B0297ABEBA000B2035 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		1F9D66B2297ABEEC000B2035 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		1F9D66B5297AC18F000B2035 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		1F9D66B8297AC2C9000B2035 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +118,8 @@
 		1F9D66A1297AB962000B2035 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				1F9D668A297AB943000B2035 /* DiscoverViewController.swift */,
+				1F9D66BA297ACED6000B2035 /* Discover */,
+				1F9D66B4297AC164000B2035 /* MainTab */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 		1F9D66A2297AB96A000B2035 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1F9D66B7297AC2B9000B2035 /* Extensions */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -150,6 +156,30 @@
 				1F9D66B2297ABEEC000B2035 /* ApiManager.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		1F9D66B4297AC164000B2035 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				1F9D66B5297AC18F000B2035 /* MainTabBarViewController.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		1F9D66B7297AC2B9000B2035 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1F9D66B8297AC2C9000B2035 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1F9D66BA297ACED6000B2035 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				1F9D668A297AB943000B2035 /* DiscoverViewController.swift */,
+			);
+			path = Discover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F9D668B297AB943000B2035 /* DiscoverViewController.swift in Sources */,
+				1F9D66B6297AC18F000B2035 /* MainTabBarViewController.swift in Sources */,
 				1F9D66A8297ABBBC000B2035 /* DiscoverHeaderView.swift in Sources */,
 				1F9D66B1297ABEBA000B2035 /* BaseService.swift in Sources */,
 				1F9D66B3297ABEEC000B2035 /* ApiManager.swift in Sources */,
+				1F9D66B9297AC2C9000B2035 /* ColorExtensions.swift in Sources */,
 				1F9D6691297AB943000B2035 /* MovieApp2023.xcdatamodeld in Sources */,
 				1F9D6687297AB943000B2035 /* AppDelegate.swift in Sources */,
 				1F9D6689297AB943000B2035 /* SceneDelegate.swift in Sources */,

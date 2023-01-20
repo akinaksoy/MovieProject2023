@@ -14,6 +14,7 @@ class DiscoverHeaderView: UIView {
         let button = UIButton()
         button.setTitle("Now Showing", for: .normal)
         button.layer.cornerRadius = 5
+        button.backgroundColor = .setbuttonColor
         return button
     }()
 
@@ -21,6 +22,7 @@ class DiscoverHeaderView: UIView {
         let button = UIButton()
         button.setTitle("Coming Soon", for: .normal)
         button.layer.cornerRadius = 5
+        button.backgroundColor = .setbuttonColor
         return button
     }()
     

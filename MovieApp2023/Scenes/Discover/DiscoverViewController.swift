@@ -22,6 +22,7 @@ class DiscoverViewController: UIViewController {
     }
     
     private func configure() {
+        view.backgroundColor = .setBackgroundColor
         view.addSubview(headerView)
         
         headerView.snp.makeConstraints { make in
