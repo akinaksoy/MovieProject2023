@@ -13,6 +13,11 @@
 		1F9D6691297AB943000B2035 /* MovieApp2023.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D668F297AB943000B2035 /* MovieApp2023.xcdatamodeld */; };
 		1F9D6693297AB944000B2035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9D6692297AB944000B2035 /* Assets.xcassets */; };
 		1F9D6696297AB944000B2035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9D6694297AB944000B2035 /* LaunchScreen.storyboard */; };
+		1F9D66A8297ABBBC000B2035 /* DiscoverHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D66A7297ABBBC000B2035 /* DiscoverHeaderView.swift */; };
+		1F9D66AB297ABD65000B2035 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F9D66AA297ABD65000B2035 /* SnapKit */; };
+		1F9D66AF297ABEAF000B2035 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1F9D66AE297ABEAF000B2035 /* Alamofire */; };
+		1F9D66B1297ABEBA000B2035 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D66B0297ABEBA000B2035 /* BaseService.swift */; };
+		1F9D66B3297ABEEC000B2035 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D66B2297ABEEC000B2035 /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,9 @@
 		1F9D6692297AB944000B2035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F9D6695297AB944000B2035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F9D6697297AB944000B2035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F9D66A7297ABBBC000B2035 /* DiscoverHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverHeaderView.swift; sourceTree = "<group>"; };
+		1F9D66B0297ABEBA000B2035 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		1F9D66B2297ABEEC000B2035 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9D66AB297ABD65000B2035 /* SnapKit in Frameworks */,
+				1F9D66AF297ABEAF000B2035 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +90,7 @@
 		1F9D669E297AB950000B2035 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1F9D66AC297ABE91000B2035 /* Service */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -118,9 +129,27 @@
 		1F9D66A3297AB970000B2035 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1F9D66A4297ABB8B000B2035 /* Discover */,
 				1F9D6694297AB944000B2035 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1F9D66A4297ABB8B000B2035 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				1F9D66A7297ABBBC000B2035 /* DiscoverHeaderView.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		1F9D66AC297ABE91000B2035 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1F9D66B0297ABEBA000B2035 /* BaseService.swift */,
+				1F9D66B2297ABEEC000B2035 /* ApiManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +168,10 @@
 			dependencies = (
 			);
 			name = MovieApp2023;
+			packageProductDependencies = (
+				1F9D66AA297ABD65000B2035 /* SnapKit */,
+				1F9D66AE297ABEAF000B2035 /* Alamofire */,
+			);
 			productName = MovieApp2023;
 			productReference = 1F9D6683297AB943000B2035 /* MovieApp2023.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +200,10 @@
 				Base,
 			);
 			mainGroup = 1F9D667A297AB943000B2035;
+			packageReferences = (
+				1F9D66A9297ABD65000B2035 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1F9D66AD297ABEAF000B2035 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1F9D6684297AB943000B2035 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F9D668B297AB943000B2035 /* DiscoverViewController.swift in Sources */,
+				1F9D66A8297ABBBC000B2035 /* DiscoverHeaderView.swift in Sources */,
+				1F9D66B1297ABEBA000B2035 /* BaseService.swift in Sources */,
+				1F9D66B3297ABEEC000B2035 /* ApiManager.swift in Sources */,
 				1F9D6691297AB943000B2035 /* MovieApp2023.xcdatamodeld in Sources */,
 				1F9D6687297AB943000B2035 /* AppDelegate.swift in Sources */,
 				1F9D6689297AB943000B2035 /* SceneDelegate.swift in Sources */,
@@ -404,6 +444,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F9D66A9297ABD65000B2035 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		1F9D66AD297ABEAF000B2035 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F9D66AA297ABD65000B2035 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F9D66A9297ABD65000B2035 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1F9D66AE297ABEAF000B2035 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F9D66AD297ABEAF000B2035 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1F9D668F297AB943000B2035 /* MovieApp2023.xcdatamodeld */ = {
