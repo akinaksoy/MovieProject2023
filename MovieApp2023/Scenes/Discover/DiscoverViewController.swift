@@ -11,14 +11,19 @@ class DiscoverViewController: UIViewController {
 
     
     fileprivate let headerView = DiscoverHeaderView()
-    
+    var viewModel : DiscoverViewModel?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel = DiscoverViewModel(viewController: self)
+        viewModel?.fetchNowPlayingMovieList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         configure()
-        
     }
     
     private func configure() {
@@ -32,7 +37,10 @@ class DiscoverViewController: UIViewController {
             make.height.equalToSuperview().multipliedBy(0.6)
         }
     }
-
+    
+    internal func reloadData() {
+        print(viewModel?.upcomingMovies)
+    }
 
 }
 

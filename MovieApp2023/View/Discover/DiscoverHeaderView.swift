@@ -33,7 +33,6 @@ class DiscoverHeaderView: UIView {
         stackView.alignment = UIStackView.Alignment.center
         return stackView
     }()
-    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         

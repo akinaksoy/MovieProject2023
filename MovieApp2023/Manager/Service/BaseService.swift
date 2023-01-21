@@ -10,10 +10,17 @@ import Alamofire
 
 public class BaseService {
     
-    class func responseService(_ url: URL,
+    class func responseService(_ type: NetworkConstants.Categories,
                                method: HTTPMethod,
                                encoding: ParameterEncoding = URLEncoding.default,
-                               completion: @escaping (Data?,Error?) -> Void) {
+                               completion: @escaping (Movie?,String?) -> Void) {
+        let baseURL = NetworkConstants.baseUrl
+        let apiKey = NetworkConstants.apiKey
+        let categoryType = type.rawValue
+        guard let url = URL(string: baseURL+categoryType+apiKey) else {
+            completion(nil, "Server Error")
+            return
+        }
         
         ApiManager.ApiRequest(url, method: method, encoding: encoding) { responseData in
             
@@ -21,10 +28,11 @@ public class BaseService {
                 switch statusCode {
                 case 200...299:
                     if let response = responseData.data {
-                        completion(response, nil)
+                        let movie = try? JSONDecoder().decode(Movie.self, from: response)
+                        completion(movie, nil)
                     }
                 default:
-                    completion(nil, responseData.error)
+                    completion(nil, responseData.error?.errorDescription)
                 }
             }
         }

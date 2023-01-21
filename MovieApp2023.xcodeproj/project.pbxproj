@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DA12407297AF27A006310F2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA12406297AF27A006310F2 /* NetworkConstants.swift */; };
+		0DA12409297AF66D006310F2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA12408297AF66D006310F2 /* Movie.swift */; };
+		0DA1240B297AF74D006310F2 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1240A297AF74D006310F2 /* DiscoverViewModel.swift */; };
+		0DA1240D297B0078006310F2 /* DiscoverMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1240C297B0078006310F2 /* DiscoverMovieView.swift */; };
+		0DA12410297B00C6006310F2 /* MovieTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1240F297B00C6006310F2 /* MovieTitleView.swift */; };
 		1F9D6687297AB943000B2035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D6686297AB943000B2035 /* AppDelegate.swift */; };
 		1F9D6689297AB943000B2035 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D6688297AB943000B2035 /* SceneDelegate.swift */; };
 		1F9D668B297AB943000B2035 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D668A297AB943000B2035 /* DiscoverViewController.swift */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DA12406297AF27A006310F2 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		0DA12408297AF66D006310F2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = MovieApp2023/Resources/Movie.swift; sourceTree = SOURCE_ROOT; };
+		0DA1240A297AF74D006310F2 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
+		0DA1240C297B0078006310F2 /* DiscoverMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMovieView.swift; sourceTree = "<group>"; };
+		0DA1240F297B00C6006310F2 /* MovieTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTitleView.swift; sourceTree = "<group>"; };
 		1F9D6683297AB943000B2035 /* MovieApp2023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp2023.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9D6686297AB943000B2035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F9D6688297AB943000B2035 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DA1240E297B00B5006310F2 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				0DA1240F297B00C6006310F2 /* MovieTitleView.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
 		1F9D667A297AB943000B2035 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +120,7 @@
 		1F9D669F297AB956000B2035 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0DA12408297AF66D006310F2 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,6 +130,7 @@
 			children = (
 				1F9D668F297AB943000B2035 /* MovieApp2023.xcdatamodeld */,
 				1F9D6692297AB944000B2035 /* Assets.xcassets */,
+				0DA12406297AF27A006310F2 /* NetworkConstants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -135,6 +155,7 @@
 		1F9D66A3297AB970000B2035 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DA1240E297B00B5006310F2 /* Movie */,
 				1F9D66A4297ABB8B000B2035 /* Discover */,
 				1F9D6694297AB944000B2035 /* LaunchScreen.storyboard */,
 			);
@@ -145,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				1F9D66A7297ABBBC000B2035 /* DiscoverHeaderView.swift */,
+				0DA1240C297B0078006310F2 /* DiscoverMovieView.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -178,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				1F9D668A297AB943000B2035 /* DiscoverViewController.swift */,
+				0DA1240A297AF74D006310F2 /* DiscoverViewModel.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -261,13 +284,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F9D668B297AB943000B2035 /* DiscoverViewController.swift in Sources */,
+				0DA1240D297B0078006310F2 /* DiscoverMovieView.swift in Sources */,
 				1F9D66B6297AC18F000B2035 /* MainTabBarViewController.swift in Sources */,
+				0DA12407297AF27A006310F2 /* NetworkConstants.swift in Sources */,
+				0DA12410297B00C6006310F2 /* MovieTitleView.swift in Sources */,
 				1F9D66A8297ABBBC000B2035 /* DiscoverHeaderView.swift in Sources */,
 				1F9D66B1297ABEBA000B2035 /* BaseService.swift in Sources */,
 				1F9D66B3297ABEEC000B2035 /* ApiManager.swift in Sources */,
 				1F9D66B9297AC2C9000B2035 /* ColorExtensions.swift in Sources */,
 				1F9D6691297AB943000B2035 /* MovieApp2023.xcdatamodeld in Sources */,
 				1F9D6687297AB943000B2035 /* AppDelegate.swift in Sources */,
+				0DA1240B297AF74D006310F2 /* DiscoverViewModel.swift in Sources */,
+				0DA12409297AF66D006310F2 /* Movie.swift in Sources */,
 				1F9D6689297AB943000B2035 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -390,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
