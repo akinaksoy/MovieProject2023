@@ -11,7 +11,11 @@ import UIKit
 
 class DiscoverViewModel {
     
-    var nowPlayingMovies : [Result]?
+    var nowPlayingMovies : Movie? {
+        didSet {
+            MovieManager.shared.movies = nowPlayingMovies
+        }
+    }
     var upcomingMovies : [Result]?
     var viewController : DiscoverViewController?
     
@@ -21,8 +25,10 @@ class DiscoverViewModel {
     
     internal func fetchNowPlayingMovieList() {
         BaseService.responseService(.now_playing, method: .get) { movie,_ in
-            self.upcomingMovies = movie?.results
-            self.viewController?.reloadData()
+            self.nowPlayingMovies = movie
+            let imageList = MovieManager.shared.getImageList()
+            self.viewController?.updateImages(imageList)
+            print(imageList)
         }
     }
     

@@ -10,7 +10,8 @@ import UIKit
 class DiscoverViewController: UIViewController {
 
     
-    fileprivate let headerView = DiscoverHeaderView()
+    fileprivate var headerView = DiscoverHeaderView()
+    
     var viewModel : DiscoverViewModel?
     
     
@@ -28,18 +29,20 @@ class DiscoverViewController: UIViewController {
     
     private func configure() {
         view.backgroundColor = .setBackgroundColor
-        view.addSubview(headerView)
+       
+            view.addSubview(headerView)
+            headerView.snp.makeConstraints { make in
+                make.top.equalToSuperview().offset(32)
+                make.leading.trailing.equalToSuperview()
+                make.width.equalToSuperview()
+                make.height.equalToSuperview().multipliedBy(0.6)
+            }
         
-        headerView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(32)
-            make.leading.trailing.equalToSuperview()
-            make.width.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.6)
-        }
+   
     }
     
-    internal func reloadData() {
-        print(viewModel?.upcomingMovies)
+    internal func updateImages(_ images : [String]) {
+        headerView.setImages(images)
     }
 
 }

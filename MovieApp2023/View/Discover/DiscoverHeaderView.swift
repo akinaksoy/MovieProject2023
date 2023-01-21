@@ -33,24 +33,43 @@ class DiscoverHeaderView: UIView {
         stackView.alignment = UIStackView.Alignment.center
         return stackView
     }()
+    
+    var viewHeight : Int = 0
+    var viewWidth : Int = 0
+    
+    fileprivate var movieBanner = DiscoverMovieView()
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        
-        buttonStackView.addArrangedSubview(nowShowingButton)
-        buttonStackView.addArrangedSubview(comingSoonButton)
-        self.addSubview(buttonStackView)
-        buttonStackView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(32)
-            make.width.equalToSuperview().multipliedBy(0.6)
-        }
-        
-        
+        configure()
         
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func configure() {
+        buttonStackView.addArrangedSubview(nowShowingButton)
+        buttonStackView.addArrangedSubview(comingSoonButton)
+        self.addSubview(buttonStackView)
+        
+        self.addSubview(movieBanner)
+        buttonStackView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(self.safeAreaLayoutGuide).offset(32)
+            make.width.equalToSuperview().multipliedBy(0.6)
+            make.height.equalToSuperview().multipliedBy(0.2)
+        }
+        movieBanner.snp.makeConstraints { make in
+            make.top.equalTo(buttonStackView.snp_bottomMargin).offset(16)
+            make.trailing.leading.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+    }
+    
+    public func setImages(_ images : [String]) {
+        movieBanner.setBannerImages(images)
     }
     
     
