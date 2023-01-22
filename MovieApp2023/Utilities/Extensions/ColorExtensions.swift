@@ -34,6 +34,14 @@ extension UIColor {
         }
     }
     
+    static var setButtonTextColor: UIColor {
+        if let color = UIColor(named: "buttonTextColor") {
+            return color
+        } else {
+            return .white
+        }
+    }
+    
     static var setTextColor: UIColor {
         if let color = UIColor(named: "textColor") {
             return color

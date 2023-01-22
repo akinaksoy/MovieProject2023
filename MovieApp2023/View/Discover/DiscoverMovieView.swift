@@ -83,7 +83,7 @@ extension DiscoverMovieView: MovieBannerCollectionViewDataSource, UICollectionVi
     
     func movieBannerCollectionView(_ movieBannerCollectionView: MovieBannerCollectionView, didDisplayItemAt index: Int) {
         pageControl.currentPage = index
-        headerDelegate?.setMovieBannerImage(bannerMovieList[index])
+        headerDelegate?.setMovieBannerImage(index)
     }
     
 }

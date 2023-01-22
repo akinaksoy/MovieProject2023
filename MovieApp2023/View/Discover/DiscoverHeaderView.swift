@@ -9,11 +9,11 @@ import UIKit
 import SnapKit
 
 protocol DiscoverHeaderViewDataSource {
-    func setMovieBannerImage(_ image: String)
+    func setMovieBannerImage(_ image: Int)
 }
 
 class DiscoverHeaderView: UIView {
-
+    
     lazy var nowShowingButton : UIButton = {
         let button = UIButton()
         button.setTitle("Now Showing", for: .normal)
@@ -30,13 +30,8 @@ class DiscoverHeaderView: UIView {
         return button
     }()
     
-    lazy var buttonStackView : UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = NSLayoutConstraint.Axis.horizontal
-        stackView.distribution = UIStackView.Distribution.equalSpacing
-        stackView.alignment = UIStackView.Alignment.center
-        return stackView
-    }()
+    lazy var buttonStackView = UIStackView().horizontalStackView()
+    
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
@@ -47,26 +42,26 @@ class DiscoverHeaderView: UIView {
         return imageView
     }()
     
-    var viewHeight : Int = 0
-    var viewWidth : Int = 0
-    
     private lazy var movieBanner : DiscoverMovieView = {
        var movieBanner = DiscoverMovieView()
         movieBanner.headerDelegate = self
         return movieBanner
     }()
     var selectedMovie : String?
+    var discoverDelegate : DiscoverViewControllerDataSource?
+    var movieList = [String]()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        
-        
         configure()
-        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func getMovies() {
+        movieList = MovieManager.shared.getImageList()
     }
     
     public func configure() {
@@ -98,15 +93,17 @@ class DiscoverHeaderView: UIView {
     
     public func setImages(_ images : [String]) {
         movieBanner.setBannerImages(images)
+        getMovies()
     }
     
     
 }
 
 extension DiscoverHeaderView : DiscoverHeaderViewDataSource {
-    func setMovieBannerImage(_ image: String) {
+    func setMovieBannerImage(_ index: Int) {
         backgroundImageView.image = nil
-        backgroundImageView.setImage(imageUrl: image)
+        backgroundImageView.setImage(imageUrl: movieList[index])
+        discoverDelegate?.setMovieTitle(index)
     }
     
     

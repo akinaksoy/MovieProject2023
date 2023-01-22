@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol DiscoverViewControllerDataSource {
+    func setMovieTitle(_ index : Int)
+}
+
+
 class DiscoverViewController: UIViewController {
 
     
     fileprivate var headerView = DiscoverHeaderView()
-    
+    fileprivate var movieTitleView = MovieTitleView()
     var viewModel : DiscoverViewModel?
     
     
@@ -25,19 +30,25 @@ class DiscoverViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         configure()
+        headerView.discoverDelegate = self
     }
     
     private func configure() {
         view.backgroundColor = .setBackgroundColor
        
             view.addSubview(headerView)
+        view.addSubview(movieTitleView)
             headerView.snp.makeConstraints { make in
                 make.top.equalToSuperview().offset(32)
                 make.leading.trailing.equalToSuperview()
                 make.width.equalToSuperview()
                 make.height.equalToSuperview().multipliedBy(0.6)
             }
-        
+        movieTitleView.snp.makeConstraints { make in
+            make.top.equalTo(headerView.snp_bottomMargin).offset(88)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.trailing.leading.equalToSuperview()
+        }
    
     }
     
@@ -47,3 +58,9 @@ class DiscoverViewController: UIViewController {
 
 }
 
+extension DiscoverViewController : DiscoverViewControllerDataSource {
+    func setMovieTitle(_ index: Int) {
+        movieTitleView.configure(index: index)
+    }
+    
+}
