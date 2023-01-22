@@ -13,7 +13,8 @@ class DiscoverMovieCollectionView: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
+        imageView.backgroundColor = .clear
         return imageView
     }()
     
@@ -25,7 +26,7 @@ class DiscoverMovieCollectionView: UICollectionViewCell {
         imageView.snp.makeConstraints { make in
             make.height.equalTo(self.cardHeight)
             make.center.equalToSuperview()
-            make.trailing.leading.equalToSuperview().inset(24)
+            make.trailing.leading.equalToSuperview()
         }
     }
     

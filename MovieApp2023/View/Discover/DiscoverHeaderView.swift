@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+protocol DiscoverHeaderViewDataSource {
+    func setMovieBannerImage(_ image: String)
+}
+
 class DiscoverHeaderView: UIView {
 
     lazy var nowShowingButton : UIButton = {
@@ -33,14 +37,30 @@ class DiscoverHeaderView: UIView {
         stackView.alignment = UIStackView.Alignment.center
         return stackView
     }()
+    lazy var backgroundImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
+        imageView.backgroundColor = .clear
+        
+        let effect = UIVisualEffectView.setBlurImage
+        imageView.addSubview(effect)
+        return imageView
+    }()
     
     var viewHeight : Int = 0
     var viewWidth : Int = 0
     
-    fileprivate var movieBanner = DiscoverMovieView()
+    private lazy var movieBanner : DiscoverMovieView = {
+       var movieBanner = DiscoverMovieView()
+        movieBanner.headerDelegate = self
+        return movieBanner
+    }()
+    var selectedMovie : String?
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
+        
+        
         configure()
         
     }
@@ -50,6 +70,8 @@ class DiscoverHeaderView: UIView {
     }
     
     public func configure() {
+        self.addSubview(backgroundImageView)
+        
         buttonStackView.addArrangedSubview(nowShowingButton)
         buttonStackView.addArrangedSubview(comingSoonButton)
         self.addSubview(buttonStackView)
@@ -66,10 +88,25 @@ class DiscoverHeaderView: UIView {
             make.trailing.leading.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+        backgroundImageView.snp.makeConstraints { make in
+            make.top.equalTo(self.safeAreaLayoutGuide)
+            make.width.equalToSuperview()
+            make.height.equalToSuperview()
+            
+        }
     }
     
     public func setImages(_ images : [String]) {
         movieBanner.setBannerImages(images)
+    }
+    
+    
+}
+
+extension DiscoverHeaderView : DiscoverHeaderViewDataSource {
+    func setMovieBannerImage(_ image: String) {
+        backgroundImageView.image = nil
+        backgroundImageView.setImage(imageUrl: image)
     }
     
     

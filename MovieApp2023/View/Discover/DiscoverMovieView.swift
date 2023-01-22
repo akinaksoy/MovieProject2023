@@ -16,6 +16,7 @@ class DiscoverMovieView: UIView {
         let pageControl = UIPageControl()
         pageControl.currentPageIndicatorTintColor = .white
         pageControl.pageIndicatorTintColor = .setbuttonColor
+        
         return pageControl
     }()
     
@@ -27,13 +28,12 @@ class DiscoverMovieView: UIView {
         collectionView.autoScrollTimer = 5.0
         collectionView.isAutoScrollEnabled = true
         collectionView.backgroundColor = .clear
-        collectionView.flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width - 60, height: 300)
+        collectionView.flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 400)
         collectionView.register(DiscoverMovieCollectionView.self,forCellWithReuseIdentifier: DiscoverMovieCollectionView.cellIdentifier)
         return collectionView
     }()
 
-    fileprivate var bannerHeight = 0
-    fileprivate var bannerWidth = 0
+    public var headerDelegate : DiscoverHeaderViewDataSource?
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -51,7 +51,7 @@ class DiscoverMovieView: UIView {
         
         pageControl.sizeToFit()
         pageControl.subviews.forEach {
-            $0.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            $0.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }
     }
     
@@ -83,6 +83,7 @@ extension DiscoverMovieView: MovieBannerCollectionViewDataSource, UICollectionVi
     
     func movieBannerCollectionView(_ movieBannerCollectionView: MovieBannerCollectionView, didDisplayItemAt index: Int) {
         pageControl.currentPage = index
+        headerDelegate?.setMovieBannerImage(bannerMovieList[index])
     }
     
 }

@@ -30,6 +30,7 @@
 		1F9D66C1297C6DFE000B2035 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D66C0297C6DFE000B2035 /* ImageManager.swift */; };
 		1F9D66C4297C6E65000B2035 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1F9D66C3297C6E65000B2035 /* Kingfisher */; };
 		1F9D66C7297C7237000B2035 /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D66C6297C7237000B2035 /* MovieManager.swift */; };
+		1F9DCC74297DA9DF00B4FAF5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DCC73297DA9DF00B4FAF5 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		1F9D66BE297C4321000B2035 /* MovieBannerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBannerCollectionView.swift; sourceTree = "<group>"; };
 		1F9D66C0297C6DFE000B2035 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		1F9D66C6297C7237000B2035 /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
+		1F9DCC73297DA9DF00B4FAF5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				1F9D66B8297AC2C9000B2035 /* ColorExtensions.swift */,
+				1F9DCC73297DA9DF00B4FAF5 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				1F9D6687297AB943000B2035 /* AppDelegate.swift in Sources */,
 				0DA1240B297AF74D006310F2 /* DiscoverViewModel.swift in Sources */,
 				0DA12409297AF66D006310F2 /* Movie.swift in Sources */,
+				1F9DCC74297DA9DF00B4FAF5 /* UIImageView+Extension.swift in Sources */,
 				1F9D66C7297C7237000B2035 /* MovieManager.swift in Sources */,
 				1F9D6689297AB943000B2035 /* SceneDelegate.swift in Sources */,
 			);
