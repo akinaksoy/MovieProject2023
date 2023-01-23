@@ -9,7 +9,8 @@ import UIKit
 import SnapKit
 
 protocol DiscoverHeaderViewDataSource {
-    func setMovieBannerImage(_ image: Int)
+    func setMovieBannerImage(_ imageIndex: Int)
+    func didTapBannerImage(_ imageIndex : Int)
 }
 
 class DiscoverHeaderView: UIView {
@@ -100,6 +101,10 @@ class DiscoverHeaderView: UIView {
 }
 
 extension DiscoverHeaderView : DiscoverHeaderViewDataSource {
+    func didTapBannerImage(_ imageIndex: Int) {
+        discoverDelegate?.didTapMovieBanner(imageIndex)
+    }
+    
     func setMovieBannerImage(_ index: Int) {
         backgroundImageView.image = nil
         backgroundImageView.setImage(imageUrl: movieList[index])

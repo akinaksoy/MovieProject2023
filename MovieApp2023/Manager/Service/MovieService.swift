@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-public class BaseService {
+public class MovieService {
     
     class func responseService(_ type: NetworkConstants.Categories,
                                method: HTTPMethod,

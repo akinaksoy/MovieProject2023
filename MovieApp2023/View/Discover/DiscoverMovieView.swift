@@ -86,4 +86,8 @@ extension DiscoverMovieView: MovieBannerCollectionViewDataSource, UICollectionVi
         headerDelegate?.setMovieBannerImage(index)
     }
     
+    func movieBannerCollectionView(_ movieBannerCollectionView: MovieBannerCollectionView, didSelectItemAt index: Int) {
+        headerDelegate?.didTapBannerImage(index)
+    }
+    
 }

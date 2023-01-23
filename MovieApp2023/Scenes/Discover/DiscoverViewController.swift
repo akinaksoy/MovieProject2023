@@ -9,6 +9,7 @@ import UIKit
 
 protocol DiscoverViewControllerDataSource {
     func setMovieTitle(_ index : Int)
+    func didTapMovieBanner(_ index : Int)
 }
 
 
@@ -39,7 +40,7 @@ class DiscoverViewController: UIViewController {
             view.addSubview(headerView)
         view.addSubview(movieTitleView)
             headerView.snp.makeConstraints { make in
-                make.top.equalToSuperview().offset(32)
+                make.top.equalTo(view.safeAreaInsets)
                 make.leading.trailing.equalToSuperview()
                 make.width.equalToSuperview()
                 make.height.equalToSuperview().multipliedBy(0.6)
@@ -55,10 +56,17 @@ class DiscoverViewController: UIViewController {
     internal func updateImages(_ images : [String]) {
         headerView.setImages(images)
     }
+    
+    internal func navigateToMovieDetail(movieDetail : MovieDetailModel) {
+    }
 
 }
 
 extension DiscoverViewController : DiscoverViewControllerDataSource {
+    func didTapMovieBanner(_ index: Int) {
+        viewModel?.fetchYoutubeTrailer(index: index)
+    }
+    
     func setMovieTitle(_ index: Int) {
         movieTitleView.configure(index: index)
     }

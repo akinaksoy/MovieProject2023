@@ -24,7 +24,7 @@ class DiscoverViewModel {
     }
     
     internal func fetchNowPlayingMovieList() {
-        BaseService.responseService(.now_playing, method: .get) { movie,_ in
+        MovieService.responseService(.now_playing, method: .get) { movie,_ in
             self.nowPlayingMovies = movie
             let imageList = MovieManager.shared.getImageList()
             self.viewController?.updateImages(imageList)
@@ -32,5 +32,28 @@ class DiscoverViewModel {
         }
     }
     
+    internal func fetchYoutubeTrailer(index : Int) {
+        var movieDetail : MovieDetailModel?
+        if let movie = MovieManager.shared.movies?.results?[index], let movieTitle = movie.originalTitle{
+            var videoElement : VideoElement?
+            YoutubeService.responseService(movieTitle, method: .get) { videoResponse, error in
+                if let videoResponse = videoResponse {
+                    videoElement = videoResponse.items[0]
+                }
+                guard let videoElement = videoElement else {return}
+
+                movieDetail = MovieDetailModel(title: movieTitle,
+                                                    youtubeView: videoElement,
+                                                    overview: movie.overview,
+                                                    voteAverage: movie.voteAverage,
+                                                    adult: movie.adult,
+                                                    relaseDate: movie.releaseDate)
+                if let movieDetail = movieDetail {
+                    self.viewController?.navigateToMovieDetail(movieDetail: movieDetail)
+                }
+            }
+            
+        }
+    }
     
 }
