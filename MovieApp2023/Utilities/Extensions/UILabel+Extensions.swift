@@ -20,4 +20,16 @@ extension UILabel {
         return self
     }
 
+    func titleLabel(text: String?, fontSize: CGFloat) -> UILabel{
+        
+        self.text = text ?? ""
+        self.font = .boldSystemFont(ofSize: fontSize)
+        self.textColor = .setTextColor
+        self.numberOfLines = 0
+        self.textAlignment = .center
+        return self
+    }
+    
+    
+    
 }

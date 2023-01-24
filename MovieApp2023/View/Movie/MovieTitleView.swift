@@ -44,13 +44,18 @@ class MovieTitleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setDatas(title : String, releaseDate: String, voteAverage : String) {
+        titleLabel.text = title
+        infoView.configure(dateText: releaseDate, rateText: voteAverage)
+    }
     
     func configure(index : Int) {
-        if let movie = MovieManager.shared.movies?.results?[index] {
-            titleLabel.text = movie.originalTitle
-            if let releaseDate = movie.releaseDate, let voteAverage = movie.voteAverage {
-                infoView.configure(dateText: releaseDate, rateText: "\(voteAverage)/10")
-            }
+        if let movie = MovieManager.shared.movies?.results?[index],
+           let title = movie.originalTitle,
+           let releaseDate = movie.releaseDate,
+           let voteAverage = movie.voteAverage {
+            
+            setDatas(title: title, releaseDate: releaseDate, voteAverage: "\(voteAverage)/10")
         }
     }
     

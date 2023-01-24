@@ -58,6 +58,9 @@ class DiscoverViewController: UIViewController {
     }
     
     internal func navigateToMovieDetail(movieDetail : MovieDetailModel) {
+        let movieDetailVC = MovieDetailViewController()
+        movieDetailVC.movieDetailModel = movieDetail
+        navigationController?.pushViewController(movieDetailVC, animated: true)
     }
 
 }

@@ -30,5 +30,10 @@ class TrailerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    public func configureVideo(_ embed : String) {
+        guard let url = URL(string: "\(NetworkConstants.youtubeEmbedVideo)\(embed)") else {return}
+        
+        webView.load(URLRequest(url: url))
+        
+    }
 }

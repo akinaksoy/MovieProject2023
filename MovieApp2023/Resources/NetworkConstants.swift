@@ -16,7 +16,7 @@ struct NetworkConstants {
     
     static let youtubeUrl = "https://youtube.googleapis.com/youtube/v3/search?q="
     static let youtubeAPI = "&key=AIzaSyA73SwgcbIKRDEJKoMeV-JiQOO1leNUL7I"
-    
+    static let youtubeEmbedVideo = "https://www.youtube.com/embed/"
     enum Categories : String{
         case now_playing = "now_playing"
     }
