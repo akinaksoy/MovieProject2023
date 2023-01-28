@@ -16,8 +16,9 @@ public class YoutubeService {
                                completion: @escaping (YoutubeSearchResponse?,String?) -> Void) {
         let baseURL = NetworkConstants.youtubeUrl
         let apiKey = NetworkConstants.youtubeAPI
-        
-        guard let url = URL(string: baseURL+query+apiKey) else {
+        guard let querySpacing = query.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {return}
+        let urlString = baseURL+querySpacing+apiKey
+        guard let url = URL(string: urlString) else {
             completion(nil, "Server Error")
             return
         }

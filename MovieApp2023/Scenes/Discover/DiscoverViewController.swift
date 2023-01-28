@@ -13,7 +13,7 @@ protocol DiscoverViewControllerDataSource {
 }
 
 
-class DiscoverViewController: UIViewController {
+class DiscoverViewController: BaseViewController {
 
     
     fileprivate var headerView = DiscoverHeaderView()
@@ -34,17 +34,17 @@ class DiscoverViewController: UIViewController {
         headerView.discoverDelegate = self
     }
     
-    private func configure() {
-        view.backgroundColor = .setBackgroundColor
+    override func configure() {
+        super.configure()
        
-            view.addSubview(headerView)
+        view.addSubview(headerView)
         view.addSubview(movieTitleView)
-            headerView.snp.makeConstraints { make in
-                make.top.equalTo(view.safeAreaInsets)
-                make.leading.trailing.equalToSuperview()
-                make.width.equalToSuperview()
-                make.height.equalToSuperview().multipliedBy(0.6)
-            }
+        headerView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaInsets)
+            make.leading.trailing.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalToSuperview().multipliedBy(0.6)
+        }
         movieTitleView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp_bottomMargin).offset(88)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
@@ -56,13 +56,6 @@ class DiscoverViewController: UIViewController {
     internal func updateImages(_ images : [String]) {
         headerView.setImages(images)
     }
-    
-    internal func navigateToMovieDetail(movieDetail : MovieDetailModel) {
-        let movieDetailVC = MovieDetailViewController()
-        movieDetailVC.movieDetailModel = movieDetail
-        navigationController?.pushViewController(movieDetailVC, animated: true)
-    }
-
 }
 
 extension DiscoverViewController : DiscoverViewControllerDataSource {
@@ -74,4 +67,13 @@ extension DiscoverViewController : DiscoverViewControllerDataSource {
         movieTitleView.configure(index: index)
     }
     
+}
+
+extension DiscoverViewController : NavigateToMovieDetailRouterLogic {
+    
+    internal func navigateToMovieDetail(movieDetail : MovieDetailModel) {
+        let movieDetailVC = MovieDetailViewController()
+        movieDetailVC.movieDetailModel = movieDetail
+        navigationController?.pushViewController(movieDetailVC, animated: true)
+    }
 }

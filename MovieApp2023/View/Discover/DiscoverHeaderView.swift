@@ -17,7 +17,7 @@ class DiscoverHeaderView: UIView {
     
     lazy var nowShowingButton : UIButton = {
         let button = UIButton()
-        button.setTitle("Now Showing", for: .normal)
+        button.setTitle(Constants.nowShowing, for: .normal)
         button.layer.cornerRadius = 5
         button.backgroundColor = .setbuttonColor
         return button
@@ -25,7 +25,7 @@ class DiscoverHeaderView: UIView {
 
     lazy var comingSoonButton : UIButton = {
         let button = UIButton()
-        button.setTitle("Coming Soon", for: .normal)
+        button.setTitle(Constants.comingSoon, for: .normal)
         button.layer.cornerRadius = 5
         button.backgroundColor = .setbuttonColor
         return button

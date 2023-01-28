@@ -42,6 +42,8 @@
 		1F9FF83D297F1DA900DF0ECD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF83C297F1DA800DF0ECD /* Constants.swift */; };
 		1F9FF83F297F1DD800DF0ECD /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF83E297F1DD800DF0ECD /* MovieDetailViewModel.swift */; };
 		1F9FF843297F1E2E00DF0ECD /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF842297F1E2E00DF0ECD /* MovieDetailModel.swift */; };
+		1FFF3F612985C2020096E7BC /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F602985C2020096E7BC /* RouterProtocol.swift */; };
+		1FFF3F642985C43F0096E7BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F632985C43F0096E7BC /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		1F9FF83C297F1DA800DF0ECD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1F9FF83E297F1DD800DF0ECD /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		1F9FF842297F1E2E00DF0ECD /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
+		1FFF3F602985C2020096E7BC /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		1FFF3F632985C43F0096E7BC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 		1F9D66A2297AB96A000B2035 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1FFF3F622985C42C0096E7BC /* Base */,
+				1FFF3F5F2985C1F10096E7BC /* Protocols */,
 				1F9D66B7297AC2B9000B2035 /* Extensions */,
 			);
 			path = Utilities;
@@ -303,6 +309,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1FFF3F5F2985C1F10096E7BC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1FFF3F602985C2020096E7BC /* RouterProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1FFF3F622985C42C0096E7BC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1FFF3F632985C43F0096E7BC /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -388,6 +410,7 @@
 				1F9D668B297AB943000B2035 /* DiscoverViewController.swift in Sources */,
 				1F9D66C1297C6DFE000B2035 /* ImageManager.swift in Sources */,
 				1F9D66BF297C4321000B2035 /* MovieBannerCollectionView.swift in Sources */,
+				1FFF3F612985C2020096E7BC /* RouterProtocol.swift in Sources */,
 				1F9D66BC297BD60F000B2035 /* DiscoverMovieCollectionView.swift in Sources */,
 				1F9FF843297F1E2E00DF0ECD /* MovieDetailModel.swift in Sources */,
 				1F9FF834297F19BA00DF0ECD /* MovieDetailViewController.swift in Sources */,
@@ -395,6 +418,7 @@
 				1F9DCC79297DC70100B4FAF5 /* UILabel+Extensions.swift in Sources */,
 				1F9D66B6297AC18F000B2035 /* MainTabBarViewController.swift in Sources */,
 				0DA12407297AF27A006310F2 /* NetworkConstants.swift in Sources */,
+				1FFF3F642985C43F0096E7BC /* BaseViewController.swift in Sources */,
 				1F9FF83D297F1DA900DF0ECD /* Constants.swift in Sources */,
 				0DA12410297B00C6006310F2 /* MovieTitleView.swift in Sources */,
 				1F9D66A8297ABBBC000B2035 /* DiscoverHeaderView.swift in Sources */,

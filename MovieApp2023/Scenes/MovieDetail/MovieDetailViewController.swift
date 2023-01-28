@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieDetailViewController: UIViewController {
+class MovieDetailViewController: BaseViewController {
 
     
     let trailerView = TrailerView()
@@ -34,7 +34,9 @@ class MovieDetailViewController: UIViewController {
         
     }
     
-    private func configure() {
+    override func configure() {
+        super.configure()
+        
         view.addSubview(trailerView)
         view.addSubview(movieDetailArea)
         view.addSubview(adultLabel)
@@ -79,9 +81,9 @@ class MovieDetailViewController: UIViewController {
 
         trailerView.configureVideo(movieDetailModel.youtubeView.id.videoId)
         if let adult = movieDetailModel.adult, adult{
-            adultLabel.text = "Adult"
+            adultLabel.text = Constants.adult
         } else {
-            adultLabel.text = "Everyone"
+            adultLabel.text = Constants.everyone
         }
         titleArea.setDatas(title: movieDetailModel.title ?? "",
                            releaseDate: movieDetailModel.relaseDate ?? "",

@@ -11,5 +11,10 @@ struct Constants{
     
     
     static let trailer = " trailer"
+    static let adult = "Adult"
+    static let everyone = "Everyone"
+    static let nowShowing = "Now Showing"
+    static let comingSoon = "Coming Soon"
+    
     
 }
