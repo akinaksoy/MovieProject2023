@@ -10,9 +10,9 @@ import SnapKit
 class MovieInfoView: UIView {
 
     let dateView = UIView().bubbleView()
-    let dateLabel = UILabel().bubbleLabel( text: "", fontSize: 12)
+    let dateLabel = UILabel().setLabel(text: "", fontSize: 12, fontColor: .setbuttonColor)
     let rateView = UIView().bubbleView()
-    let rateLabel = UILabel().bubbleLabel( text: "", fontSize: 12)
+    let rateLabel = UILabel().setLabel(text: "", fontSize: 12, fontColor: .setbuttonColor)
     
     let infoStackView = UIStackView().horizontalStackView()
     

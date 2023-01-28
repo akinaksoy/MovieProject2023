@@ -19,9 +19,18 @@ class MovieDetailViewController: BaseViewController {
         return infoArea
     }()
     
-    var adultLabel = UILabel().titleLabel(text: "", fontSize: 16)
+    var adultLabel = UILabel().setLabel(text: "", fontSize: 16, fontColor: .setTextColor)
     var titleArea = MovieTitleView()
-    var overViewLabel = UILabel().titleLabel(text: "", fontSize: 12)
+    var overViewLabel = UILabel().setLabel(text: "", fontSize: 12, fontColor: .setTextColor)
+    
+    lazy var bookingButton : ButtonView = {
+        let button = ButtonView()
+        button.configure(buttonText: Constants.booking)
+        button.didTapButton = {
+            self.didTappedBookingButton()
+        }
+        return button
+    }()
     
     public var movieDetailModel : MovieDetailModel?
     
@@ -42,6 +51,7 @@ class MovieDetailViewController: BaseViewController {
         view.addSubview(adultLabel)
         view.addSubview(titleArea)
         view.addSubview(overViewLabel)
+        view.addSubview(bookingButton)
         
         trailerView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -71,6 +81,13 @@ class MovieDetailViewController: BaseViewController {
             make.centerX.equalToSuperview()
         }
         
+        bookingButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(16)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.3)
+            make.height.equalTo(40)
+        }
+        
         
     }
     
@@ -93,4 +110,10 @@ class MovieDetailViewController: BaseViewController {
         }
     }
     
+    private func didTappedBookingButton() {
+        print("click")
+    }
+    
 }
+
+

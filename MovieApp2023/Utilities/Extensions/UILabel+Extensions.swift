@@ -10,26 +10,13 @@ import UIKit
 
 extension UILabel {
 
-    func bubbleLabel(text: String?, fontSize: CGFloat) -> UILabel{
+    func setLabel(text: String?, fontSize: CGFloat,fontColor : UIColor) -> UILabel{
         
         self.text = text ?? ""
         self.font = .boldSystemFont(ofSize: fontSize)
-        self.textColor = .setbuttonColor
+        self.textColor = fontColor
         self.numberOfLines = 0
         self.textAlignment = .center
         return self
     }
-
-    func titleLabel(text: String?, fontSize: CGFloat) -> UILabel{
-        
-        self.text = text ?? ""
-        self.font = .boldSystemFont(ofSize: fontSize)
-        self.textColor = .setTextColor
-        self.numberOfLines = 0
-        self.textAlignment = .center
-        return self
-    }
-    
-    
-    
 }

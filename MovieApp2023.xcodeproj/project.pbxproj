@@ -44,6 +44,7 @@
 		1F9FF843297F1E2E00DF0ECD /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF842297F1E2E00DF0ECD /* MovieDetailModel.swift */; };
 		1FFF3F612985C2020096E7BC /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F602985C2020096E7BC /* RouterProtocol.swift */; };
 		1FFF3F642985C43F0096E7BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F632985C43F0096E7BC /* BaseViewController.swift */; };
+		1FFF3F662985C6500096E7BC /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F652985C6500096E7BC /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		1F9FF842297F1E2E00DF0ECD /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		1FFF3F602985C2020096E7BC /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		1FFF3F632985C43F0096E7BC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1FFF3F652985C6500096E7BC /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +203,7 @@
 		1F9D66A3297AB970000B2035 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1F9FF835297F1A3200DF0ECD /* New Group */,
+				1F9FF835297F1A3200DF0ECD /* UIViews */,
 				1F9D66BD297C4304000B2035 /* BannerView */,
 				0DA1240E297B00B5006310F2 /* Movie */,
 				1F9D66A4297ABB8B000B2035 /* Discover */,
@@ -285,11 +287,12 @@
 			path = MovieDetail;
 			sourceTree = "<group>";
 		};
-		1F9FF835297F1A3200DF0ECD /* New Group */ = {
+		1F9FF835297F1A3200DF0ECD /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
+				1FFF3F652985C6500096E7BC /* ButtonView.swift */,
 			);
-			path = "New Group";
+			path = UIViews;
 			sourceTree = "<group>";
 		};
 		1F9FF840297F1E0D00DF0ECD /* Response */ = {
@@ -422,6 +425,7 @@
 				1F9FF83D297F1DA900DF0ECD /* Constants.swift in Sources */,
 				0DA12410297B00C6006310F2 /* MovieTitleView.swift in Sources */,
 				1F9D66A8297ABBBC000B2035 /* DiscoverHeaderView.swift in Sources */,
+				1FFF3F662985C6500096E7BC /* ButtonView.swift in Sources */,
 				1F9DCC7B297DC86A00B4FAF5 /* UIView+Extensions.swift in Sources */,
 				1F9DCC76297DC64C00B4FAF5 /* MovieInfoView.swift in Sources */,
 				1F9D66B1297ABEBA000B2035 /* MovieService.swift in Sources */,
