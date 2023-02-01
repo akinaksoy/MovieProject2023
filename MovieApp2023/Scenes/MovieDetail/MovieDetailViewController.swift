@@ -111,9 +111,14 @@ class MovieDetailViewController: BaseViewController {
     }
     
     private func didTappedBookingButton() {
-        print("click")
+        navigateToBookingPage()
     }
     
 }
 
-
+extension MovieDetailViewController : NavigateToBookingPageRouterLogic {
+    func navigateToBookingPage() {
+        let bookingVC = BookingViewController()
+        navigationController?.pushViewController(bookingVC, animated: true)
+    }
+}

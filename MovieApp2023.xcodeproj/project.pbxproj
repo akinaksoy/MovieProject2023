@@ -12,6 +12,8 @@
 		0DA1240B297AF74D006310F2 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1240A297AF74D006310F2 /* DiscoverViewModel.swift */; };
 		0DA1240D297B0078006310F2 /* DiscoverMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1240C297B0078006310F2 /* DiscoverMovieView.swift */; };
 		0DA12410297B00C6006310F2 /* MovieTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1240F297B00C6006310F2 /* MovieTitleView.swift */; };
+		1F68AF99298AA1E200621A99 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68AF98298AA1E200621A99 /* BookingViewController.swift */; };
+		1F68AF9D298AA6CF00621A99 /* BookingSeatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */; };
 		1F9D6687297AB943000B2035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D6686297AB943000B2035 /* AppDelegate.swift */; };
 		1F9D6689297AB943000B2035 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D6688297AB943000B2035 /* SceneDelegate.swift */; };
 		1F9D668B297AB943000B2035 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D668A297AB943000B2035 /* DiscoverViewController.swift */; };
@@ -53,6 +55,8 @@
 		0DA1240A297AF74D006310F2 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		0DA1240C297B0078006310F2 /* DiscoverMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMovieView.swift; sourceTree = "<group>"; };
 		0DA1240F297B00C6006310F2 /* MovieTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTitleView.swift; sourceTree = "<group>"; };
+		1F68AF98298AA1E200621A99 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSeatsTableViewCell.swift; sourceTree = "<group>"; };
 		1F9D6683297AB943000B2035 /* MovieApp2023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp2023.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9D6686297AB943000B2035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F9D6688297AB943000B2035 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,22 @@
 				1F9FF836297F1A5E00DF0ECD /* TrailerView.swift */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		1F68AF97298AA1BA00621A99 /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				1F68AF98298AA1E200621A99 /* BookingViewController.swift */,
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
+		1F68AF9A298AA68A00621A99 /* MovieTheaterBooking */ = {
+			isa = PBXGroup;
+			children = (
+				1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */,
+			);
+			path = MovieTheaterBooking;
 			sourceTree = "<group>";
 		};
 		1F9D667A297AB943000B2035 = {
@@ -183,6 +203,7 @@
 		1F9D66A1297AB962000B2035 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1F68AF97298AA1BA00621A99 /* Booking */,
 				1F9FF832297F198500DF0ECD /* MovieDetail */,
 				1F9D66BA297ACED6000B2035 /* Discover */,
 				1F9D66B4297AC164000B2035 /* MainTab */,
@@ -203,8 +224,8 @@
 		1F9D66A3297AB970000B2035 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1F68AF9A298AA68A00621A99 /* MovieTheaterBooking */,
 				1F9FF835297F1A3200DF0ECD /* UIViews */,
-				1F9D66BD297C4304000B2035 /* BannerView */,
 				0DA1240E297B00B5006310F2 /* Movie */,
 				1F9D66A4297ABB8B000B2035 /* Discover */,
 				1F9D6694297AB944000B2035 /* LaunchScreen.storyboard */,
@@ -215,6 +236,7 @@
 		1F9D66A4297ABB8B000B2035 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				1F9D66BD297C4304000B2035 /* BannerView */,
 				1F9D66A7297ABBBC000B2035 /* DiscoverHeaderView.swift */,
 				0DA1240C297B0078006310F2 /* DiscoverMovieView.swift */,
 				1F9D66BB297BD60F000B2035 /* DiscoverMovieCollectionView.swift */,
@@ -425,6 +447,7 @@
 				1F9FF83D297F1DA900DF0ECD /* Constants.swift in Sources */,
 				0DA12410297B00C6006310F2 /* MovieTitleView.swift in Sources */,
 				1F9D66A8297ABBBC000B2035 /* DiscoverHeaderView.swift in Sources */,
+				1F68AF9D298AA6CF00621A99 /* BookingSeatsTableViewCell.swift in Sources */,
 				1FFF3F662985C6500096E7BC /* ButtonView.swift in Sources */,
 				1F9DCC7B297DC86A00B4FAF5 /* UIView+Extensions.swift in Sources */,
 				1F9DCC76297DC64C00B4FAF5 /* MovieInfoView.swift in Sources */,
@@ -436,6 +459,7 @@
 				0DA1240B297AF74D006310F2 /* DiscoverViewModel.swift in Sources */,
 				0DA12409297AF66D006310F2 /* Movie.swift in Sources */,
 				1F9FF83F297F1DD800DF0ECD /* MovieDetailViewModel.swift in Sources */,
+				1F68AF99298AA1E200621A99 /* BookingViewController.swift in Sources */,
 				1F9FF839297F1CEE00DF0ECD /* YoutubeService.swift in Sources */,
 				1F9DCC74297DA9DF00B4FAF5 /* UIImageView+Extension.swift in Sources */,
 				1F9D66C7297C7237000B2035 /* MovieManager.swift in Sources */,

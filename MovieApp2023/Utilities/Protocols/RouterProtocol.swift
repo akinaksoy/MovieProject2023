@@ -9,6 +9,9 @@ import Foundation
 
 
 protocol NavigateToMovieDetailRouterLogic {
-    
     func navigateToMovieDetail(movieDetail : MovieDetailModel)
+}
+
+protocol NavigateToBookingPageRouterLogic {
+    func navigateToBookingPage()
 }
