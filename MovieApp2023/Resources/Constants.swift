@@ -16,6 +16,9 @@ struct Constants{
     static let nowShowing = "Now Showing"
     static let comingSoon = "Coming Soon"
     static let booking = "Booking"
+    static let available = "Available"
+    static let selected = "Selected"
+    static let reserved = "Reserved"
     
     
 }

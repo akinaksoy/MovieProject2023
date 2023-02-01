@@ -14,6 +14,8 @@
 		0DA12410297B00C6006310F2 /* MovieTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1240F297B00C6006310F2 /* MovieTitleView.swift */; };
 		1F68AF99298AA1E200621A99 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68AF98298AA1E200621A99 /* BookingViewController.swift */; };
 		1F68AF9D298AA6CF00621A99 /* BookingSeatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */; };
+		1F98A73B298AFFBD000574D1 /* SeatStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98A73A298AFFBD000574D1 /* SeatStatusView.swift */; };
+		1F98A73D298B0820000574D1 /* BookingItemsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98A73C298B0820000574D1 /* BookingItemsUIView.swift */; };
 		1F9D6687297AB943000B2035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D6686297AB943000B2035 /* AppDelegate.swift */; };
 		1F9D6689297AB943000B2035 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D6688297AB943000B2035 /* SceneDelegate.swift */; };
 		1F9D668B297AB943000B2035 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D668A297AB943000B2035 /* DiscoverViewController.swift */; };
@@ -57,6 +59,8 @@
 		0DA1240F297B00C6006310F2 /* MovieTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTitleView.swift; sourceTree = "<group>"; };
 		1F68AF98298AA1E200621A99 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSeatsTableViewCell.swift; sourceTree = "<group>"; };
+		1F98A73A298AFFBD000574D1 /* SeatStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatStatusView.swift; sourceTree = "<group>"; };
+		1F98A73C298B0820000574D1 /* BookingItemsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingItemsUIView.swift; sourceTree = "<group>"; };
 		1F9D6683297AB943000B2035 /* MovieApp2023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp2023.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9D6686297AB943000B2035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F9D6688297AB943000B2035 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */,
+				1F98A73A298AFFBD000574D1 /* SeatStatusView.swift */,
+				1F98A73C298B0820000574D1 /* BookingItemsUIView.swift */,
 			);
 			path = MovieTheaterBooking;
 			sourceTree = "<group>";
@@ -455,8 +461,10 @@
 				1F9D66B3297ABEEC000B2035 /* ApiManager.swift in Sources */,
 				1F9D66B9297AC2C9000B2035 /* ColorExtensions.swift in Sources */,
 				1F9D6691297AB943000B2035 /* MovieApp2023.xcdatamodeld in Sources */,
+				1F98A73D298B0820000574D1 /* BookingItemsUIView.swift in Sources */,
 				1F9D6687297AB943000B2035 /* AppDelegate.swift in Sources */,
 				0DA1240B297AF74D006310F2 /* DiscoverViewModel.swift in Sources */,
+				1F98A73B298AFFBD000574D1 /* SeatStatusView.swift in Sources */,
 				0DA12409297AF66D006310F2 /* Movie.swift in Sources */,
 				1F9FF83F297F1DD800DF0ECD /* MovieDetailViewModel.swift in Sources */,
 				1F68AF99298AA1E200621A99 /* BookingViewController.swift in Sources */,

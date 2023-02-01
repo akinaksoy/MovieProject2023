@@ -36,5 +36,11 @@ class BookingSeatsCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         seatImage.layoutIfNeeded()
     }
+    
+    func didTapSeat() {
+        seatImage.image = UIImage(named: "selectedChair")
+    }
+    
+    
 }
 

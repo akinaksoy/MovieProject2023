@@ -49,4 +49,26 @@ extension UIColor {
             return .white
         }
     }
+    static var setSelectedChairColor: UIColor {
+        if let color = UIColor(named: "SelectedChairColor") {
+            return color
+        } else {
+            return .white
+        }
+    }
+    static var setAvailableChairColor: UIColor {
+        if let color = UIColor(named: "availableChairColor") {
+            return color
+        } else {
+            return .white
+        }
+    }
+    static var setGoldColor: UIColor {
+        if let color = UIColor(named: "goldColor") {
+            return color
+        } else {
+            return .white
+        }
+    }
+    
 }
