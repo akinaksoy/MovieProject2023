@@ -119,6 +119,7 @@ class MovieDetailViewController: BaseViewController {
 extension MovieDetailViewController : NavigateToBookingPageRouterLogic {
     func navigateToBookingPage() {
         let bookingVC = BookingViewController()
+        bookingVC.movie = movieDetailModel
         navigationController?.pushViewController(bookingVC, animated: true)
     }
 }

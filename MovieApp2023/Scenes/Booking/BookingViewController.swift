@@ -38,12 +38,19 @@ class BookingViewController: BaseViewController {
     let seatHorizantalView = UIStackView().horizontalStackView()
     
     let bookingCartView = BookingItemsUIView()
-    
+    var movie : MovieDetailModel?
+    var viewModel : BookingViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setViewModel()
         configure()
         configureSeatViews()
+    }
+    
+    func setViewModel() {
+        if let movie = movie {
+            viewModel = BookingViewModel(viewController: self, model: movie)
+        }
     }
     
     override func configure() {
@@ -107,7 +114,11 @@ extension BookingViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? BookingSeatsCollectionViewCell {
             collectionView.reloadInputViews()
-            cell.didTapSeat()
+            
+            viewModel?.bookOrCancelSeat(indexPath: indexPath)
+            
+            let isChairSelected = viewModel?.checkSeatStatus(indexPath: indexPath) ?? false
+            cell.didTapSeat(isChairSelected: isChairSelected )
         }
     }
     

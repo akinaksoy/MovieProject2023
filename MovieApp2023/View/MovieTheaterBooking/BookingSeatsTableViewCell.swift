@@ -37,8 +37,12 @@ class BookingSeatsCollectionViewCell: UICollectionViewCell {
         seatImage.layoutIfNeeded()
     }
     
-    func didTapSeat() {
-        seatImage.image = UIImage(named: "selectedChair")
+    func didTapSeat(isChairSelected : Bool) {
+        if isChairSelected {
+            seatImage.image = UIImage(named: "selectedChair")
+        } else {
+            seatImage.image = UIImage(named: "availableChair")
+        }
     }
     
     
