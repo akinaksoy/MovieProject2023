@@ -36,7 +36,7 @@ class MovieDetailViewController: BaseViewController {
         let button = ButtonView()
         button.configure(buttonText: "5-10-2022",icon: "calendar.circle.fill",type: .filterButton)
         button.didTapButton = {
-            self.didTappedBookingButton()
+            self.didTappedDateButton()
         }
         return button
     }()
@@ -53,19 +53,18 @@ class MovieDetailViewController: BaseViewController {
     let filterButtonStackView = UIStackView().horizontalStackView()
     
     public var movieDetailModel : MovieDetailModel?
-    
+    lazy var viewModel = MovieDetailViewModel(viewController: self)
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configure()
         setMovieDatas()
-        
+        viewModel.setDateModels()
         
     }
     
     override func configure() {
         super.configure()
-        
         view.addSubview(trailerView)
         view.addSubview(movieDetailArea)
         view.addSubview(adultLabel)
@@ -94,7 +93,7 @@ class MovieDetailViewController: BaseViewController {
         titleArea.snp.makeConstraints { make in
             make.top.equalTo(adultLabel.snp_bottomMargin).offset(24)
             make.centerX.equalToSuperview()
-            make.height.equalTo(movieDetailArea).multipliedBy(0.3)
+            make.height.equalTo(movieDetailArea).multipliedBy(0.2)
             make.width.equalToSuperview()
         }
         
@@ -151,11 +150,25 @@ class MovieDetailViewController: BaseViewController {
     }
     
     private func didTappedDateButton() {
-        print("date")
+        let dateView = SelectDateView()
+        view.addSubview(dateView)
+        dateView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        dateView.configure()
+        dateView.setDatas(dateArray: viewModel.dateStringArray, viewType: .dateView)
+        
     }
     
     private func didTappedDateHourButton() {
-        print("date")
+        let dateView = SelectDateView()
+        view.addSubview(dateView)
+        dateView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        dateView.configure()
+        dateView.setDatas(dateArray: viewModel.dateHours, viewType: .hourView)
+        
     }
     
 }

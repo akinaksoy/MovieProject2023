@@ -15,6 +15,8 @@
 		1F5DC59B298C201B0006AD8A /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DC59A298C201B0006AD8A /* BookingViewModel.swift */; };
 		1F5DC59D298C213E0006AD8A /* BookingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DC59C298C213E0006AD8A /* BookingManager.swift */; };
 		1F5DC59F298C21810006AD8A /* BookingSeatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DC59E298C21810006AD8A /* BookingSeatModel.swift */; };
+		1F5DC5A3298D99F50006AD8A /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DC5A2298D99F50006AD8A /* SelectDateView.swift */; };
+		1F5DC5A5298D9B2B0006AD8A /* SelectDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DC5A4298D9B2B0006AD8A /* SelectDateTableViewCell.swift */; };
 		1F68AF99298AA1E200621A99 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68AF98298AA1E200621A99 /* BookingViewController.swift */; };
 		1F68AF9D298AA6CF00621A99 /* BookingSeatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */; };
 		1F98A73B298AFFBD000574D1 /* SeatStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98A73A298AFFBD000574D1 /* SeatStatusView.swift */; };
@@ -63,6 +65,8 @@
 		1F5DC59A298C201B0006AD8A /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		1F5DC59C298C213E0006AD8A /* BookingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingManager.swift; sourceTree = "<group>"; };
 		1F5DC59E298C21810006AD8A /* BookingSeatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSeatModel.swift; sourceTree = "<group>"; };
+		1F5DC5A2298D99F50006AD8A /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
+		1F5DC5A4298D9B2B0006AD8A /* SelectDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateTableViewCell.swift; sourceTree = "<group>"; };
 		1F68AF98298AA1E200621A99 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSeatsTableViewCell.swift; sourceTree = "<group>"; };
 		1F98A73A298AFFBD000574D1 /* SeatStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatStatusView.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				0DA1240F297B00C6006310F2 /* MovieTitleView.swift */,
 				1F9DCC75297DC64C00B4FAF5 /* MovieInfoView.swift */,
 				1F9FF836297F1A5E00DF0ECD /* TrailerView.swift */,
+				1F5DC5A2298D99F50006AD8A /* SelectDateView.swift */,
+				1F5DC5A4298D9B2B0006AD8A /* SelectDateTableViewCell.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -481,6 +487,8 @@
 				1F9FF83F297F1DD800DF0ECD /* MovieDetailViewModel.swift in Sources */,
 				1F68AF99298AA1E200621A99 /* BookingViewController.swift in Sources */,
 				1F9FF839297F1CEE00DF0ECD /* YoutubeService.swift in Sources */,
+				1F5DC5A3298D99F50006AD8A /* SelectDateView.swift in Sources */,
+				1F5DC5A5298D9B2B0006AD8A /* SelectDateTableViewCell.swift in Sources */,
 				1F9DCC74297DA9DF00B4FAF5 /* UIImageView+Extension.swift in Sources */,
 				1F9D66C7297C7237000B2035 /* MovieManager.swift in Sources */,
 				1F9DCC7D297DC8F200B4FAF5 /* UIStackView+Extension.swift in Sources */,
