@@ -7,6 +7,12 @@
 
 import UIKit
 
+
+enum buttonType {
+    case filterButton
+    case functionalButton
+}
+
 class ButtonView: UIView {
 
     let ticketIcon : UIImageView = {
@@ -26,6 +32,8 @@ class ButtonView: UIView {
         button.layer.cornerRadius = 16
         return button
     }()
+    
+    var didTapButton: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -53,11 +61,23 @@ class ButtonView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    internal func configure(buttonText : String) {
+    internal func configure(buttonText : String,icon : String,type : buttonType) {
         ticketLabel.text = buttonText
+        ticketIcon.image = UIImage(systemName: icon)
+        
+        switch type {
+        case .filterButton:
+            button.backgroundColor = .setBorderGreyColor
+            ticketLabel.textColor = .setTextColor
+            ticketIcon.tintColor = .setbuttonColor
+        case .functionalButton:
+            button.backgroundColor = .setbuttonColor
+            ticketLabel.textColor = .setButtonTextColor
+            ticketIcon.tintColor = .setButtonTextColor
+        }
+        
     }
     
-    var didTapButton: (() -> Void)?
     
     @objc func didTappedButton() {
         if let didTapButton = didTapButton {

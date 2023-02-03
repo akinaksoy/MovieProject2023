@@ -22,7 +22,7 @@ class BookingItemsUIView: UIView {
     
     let addToCartButton : ButtonView = {
        let button = ButtonView()
-        button.configure(buttonText: "Add to Cart")
+        button.configure(buttonText: "Add to Cart",icon: "cart.circle",type: .functionalButton)
        return button
     }()
     

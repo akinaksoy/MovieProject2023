@@ -19,10 +19,10 @@ class SeatStatusView: UIView {
     var statusColor : UIView = {
        let view = UIView()
         view.contentMode = .scaleAspectFit
-        view.backgroundColor = .setAvailableChairColor
+        view.backgroundColor = .setGreyColor
        return view
     }()
-    var statusLabel = UILabel().setLabel(text: "", fontSize: 12, fontColor: .setAvailableChairColor)
+    var statusLabel = UILabel().setLabel(text: "", fontSize: 12, fontColor: .setGreyColor)
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -48,15 +48,15 @@ class SeatStatusView: UIView {
         
         switch chairStatus {
         case .availableChair:
-            statusColor.backgroundColor = .setAvailableChairColor
+            statusColor.backgroundColor = .setGreyColor
             statusLabel.text = Constants.available
-            statusLabel.textColor = .setAvailableChairColor
+            statusLabel.textColor = .setGreyColor
         case .selectedChair:
             statusColor.backgroundColor = .setSelectedChairColor
             statusLabel.text = Constants.selected
             statusLabel.textColor = .setSelectedChairColor
         case .reservedChair:
-            statusColor.backgroundColor = .setAvailableChairColor
+            statusColor.backgroundColor = .setGreyColor
             statusLabel.text = Constants.reserved
             statusLabel.textColor = .setSelectedChairColor
         }

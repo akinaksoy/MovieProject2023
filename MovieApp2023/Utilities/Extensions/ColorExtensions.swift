@@ -56,8 +56,8 @@ extension UIColor {
             return .white
         }
     }
-    static var setAvailableChairColor: UIColor {
-        if let color = UIColor(named: "availableChairColor") {
+    static var setGreyColor: UIColor {
+        if let color = UIColor(named: "greyColor") {
             return color
         } else {
             return .white

@@ -25,12 +25,32 @@ class MovieDetailViewController: BaseViewController {
     
     lazy var bookingButton : ButtonView = {
         let button = ButtonView()
-        button.configure(buttonText: Constants.booking)
+        button.configure(buttonText: Constants.booking,icon: "cart.circle",type: .functionalButton)
         button.didTapButton = {
             self.didTappedBookingButton()
         }
         return button
     }()
+    
+    lazy var dateButton : ButtonView = {
+        let button = ButtonView()
+        button.configure(buttonText: "5-10-2022",icon: "calendar.circle.fill",type: .filterButton)
+        button.didTapButton = {
+            self.didTappedBookingButton()
+        }
+        return button
+    }()
+    
+    lazy var dateHourButton : ButtonView = {
+        let button = ButtonView()
+        button.configure(buttonText: "22:00",icon: "stopwatch",type: .filterButton)
+        button.didTapButton = {
+            self.didTappedDateHourButton()
+        }
+        return button
+    }()
+    
+    let filterButtonStackView = UIStackView().horizontalStackView()
     
     public var movieDetailModel : MovieDetailModel?
     
@@ -51,6 +71,9 @@ class MovieDetailViewController: BaseViewController {
         view.addSubview(adultLabel)
         view.addSubview(titleArea)
         view.addSubview(overViewLabel)
+        filterButtonStackView.addArrangedSubview(dateButton)
+        filterButtonStackView.addArrangedSubview(dateHourButton)
+        view.addSubview(filterButtonStackView)
         view.addSubview(bookingButton)
         
         trailerView.snp.makeConstraints { make in
@@ -76,9 +99,22 @@ class MovieDetailViewController: BaseViewController {
         }
         
         overViewLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleArea.snp_bottomMargin).offset(16)
+            make.top.equalTo(titleArea.snp_bottomMargin).offset(8)
             make.width.equalToSuperview()
             make.centerX.equalToSuperview()
+        }
+        
+        dateButton.snp.makeConstraints { make in
+            make.width.equalToSuperview().multipliedBy(0.5)
+        }
+        dateHourButton.snp.makeConstraints { make in
+            make.width.equalToSuperview().multipliedBy(0.5)
+        }
+        filterButtonStackView.snp.makeConstraints { make in
+            make.top.equalTo(overViewLabel.snp_bottomMargin).offset(8)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.7)
+            make.height.equalTo(40)
         }
         
         bookingButton.snp.makeConstraints { make in
@@ -112,6 +148,14 @@ class MovieDetailViewController: BaseViewController {
     
     private func didTappedBookingButton() {
         navigateToBookingPage()
+    }
+    
+    private func didTappedDateButton() {
+        print("date")
+    }
+    
+    private func didTappedDateHourButton() {
+        print("date")
     }
     
 }
