@@ -51,6 +51,9 @@
 		1F9FF83D297F1DA900DF0ECD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF83C297F1DA800DF0ECD /* Constants.swift */; };
 		1F9FF83F297F1DD800DF0ECD /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF83E297F1DD800DF0ECD /* MovieDetailViewModel.swift */; };
 		1F9FF843297F1E2E00DF0ECD /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FF842297F1E2E00DF0ECD /* MovieDetailModel.swift */; };
+		1FACD026298EF4E900957351 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACD025298EF4E900957351 /* CartViewController.swift */; };
+		1FACD029298EF73000957351 /* CartOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACD028298EF73000957351 /* CartOrderView.swift */; };
+		1FACD02B298EFAED00957351 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACD02A298EFAED00957351 /* CartTableViewCell.swift */; };
 		1FFF3F612985C2020096E7BC /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F602985C2020096E7BC /* RouterProtocol.swift */; };
 		1FFF3F642985C43F0096E7BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F632985C43F0096E7BC /* BaseViewController.swift */; };
 		1FFF3F662985C6500096E7BC /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F652985C6500096E7BC /* ButtonView.swift */; };
@@ -100,6 +103,9 @@
 		1F9FF83C297F1DA800DF0ECD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1F9FF83E297F1DD800DF0ECD /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		1F9FF842297F1E2E00DF0ECD /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
+		1FACD025298EF4E900957351 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		1FACD028298EF73000957351 /* CartOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartOrderView.swift; sourceTree = "<group>"; };
+		1FACD02A298EFAED00957351 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		1FFF3F602985C2020096E7BC /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		1FFF3F632985C43F0096E7BC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1FFF3F652985C6500096E7BC /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 		1F9D66A1297AB962000B2035 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1FACD024298EF4D100957351 /* CartPage */,
 				1F68AF97298AA1BA00621A99 /* Booking */,
 				1F9FF832297F198500DF0ECD /* MovieDetail */,
 				1F9D66BA297ACED6000B2035 /* Discover */,
@@ -243,6 +250,7 @@
 		1F9D66A3297AB970000B2035 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1FACD027298EF71A00957351 /* Cart */,
 				1F68AF9A298AA68A00621A99 /* MovieTheaterBooking */,
 				1F9FF835297F1A3200DF0ECD /* UIViews */,
 				0DA1240E297B00B5006310F2 /* Movie */,
@@ -355,6 +363,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1FACD024298EF4D100957351 /* CartPage */ = {
+			isa = PBXGroup;
+			children = (
+				1FACD025298EF4E900957351 /* CartViewController.swift */,
+			);
+			path = CartPage;
+			sourceTree = "<group>";
+		};
+		1FACD027298EF71A00957351 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				1FACD028298EF73000957351 /* CartOrderView.swift */,
+				1FACD02A298EFAED00957351 /* CartTableViewCell.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		1FFF3F5F2985C1F10096E7BC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,9 +488,11 @@
 				0DA1240D297B0078006310F2 /* DiscoverMovieView.swift in Sources */,
 				1F9DCC79297DC70100B4FAF5 /* UILabel+Extensions.swift in Sources */,
 				1F5DC59D298C213E0006AD8A /* BookingManager.swift in Sources */,
+				1FACD02B298EFAED00957351 /* CartTableViewCell.swift in Sources */,
 				1F9D66B6297AC18F000B2035 /* MainTabBarViewController.swift in Sources */,
 				0DA12407297AF27A006310F2 /* NetworkConstants.swift in Sources */,
 				1FFF3F642985C43F0096E7BC /* BaseViewController.swift in Sources */,
+				1FACD026298EF4E900957351 /* CartViewController.swift in Sources */,
 				1F9FF83D297F1DA900DF0ECD /* Constants.swift in Sources */,
 				0DA12410297B00C6006310F2 /* MovieTitleView.swift in Sources */,
 				1F9D66A8297ABBBC000B2035 /* DiscoverHeaderView.swift in Sources */,
@@ -489,6 +516,7 @@
 				1F9FF839297F1CEE00DF0ECD /* YoutubeService.swift in Sources */,
 				1F5DC5A3298D99F50006AD8A /* SelectDateView.swift in Sources */,
 				1F5DC5A5298D9B2B0006AD8A /* SelectDateTableViewCell.swift in Sources */,
+				1FACD029298EF73000957351 /* CartOrderView.swift in Sources */,
 				1F9DCC74297DA9DF00B4FAF5 /* UIImageView+Extension.swift in Sources */,
 				1F9D66C7297C7237000B2035 /* MovieManager.swift in Sources */,
 				1F9DCC7D297DC8F200B4FAF5 /* UIStackView+Extension.swift in Sources */,

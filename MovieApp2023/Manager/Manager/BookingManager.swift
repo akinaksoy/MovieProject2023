@@ -6,14 +6,15 @@
 //
 
 import Foundation
-
+import Kingfisher
+import UIKit
 struct BookingManager {
     static var shared = BookingManager()
     
     var bookingList = [BookingSeatModel]()
     
     
-    mutating func bookOrCancelSeat(movieName : String,date : Date,indexPath : IndexPath) {
+    mutating func bookOrCancelSeat(movieName : String,date : Date,indexPath : IndexPath,posterPath : String) {
         
         let isElementExist = checkIsBooked(movieName: movieName, date: date, indexPath: indexPath)
         
@@ -40,7 +41,7 @@ struct BookingManager {
         }
         else {
             let selectedChairs = [indexPath]
-            let bookingModel = BookingSeatModel(title: movieName, date: date, selectedChairs: selectedChairs, price: 20)
+            let bookingModel = BookingSeatModel(title: movieName, date: date, selectedChairs: selectedChairs, price: 20,poster: posterPath)
             self.bookingList.append(bookingModel)
         }
         print(bookingList)

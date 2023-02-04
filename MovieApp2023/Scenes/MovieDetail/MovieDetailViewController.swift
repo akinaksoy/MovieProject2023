@@ -60,7 +60,6 @@ class MovieDetailViewController: BaseViewController {
         configure()
         setMovieDatas()
         viewModel.setDateModels()
-        
     }
     
     override func configure() {

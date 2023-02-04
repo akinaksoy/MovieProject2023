@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 class BookingViewModel {
     
     
@@ -25,7 +24,7 @@ class BookingViewModel {
             let dateFormatterGet = DateFormatter()
             dateFormatterGet.dateFormat = "yyyy-MM-dd"
             guard let date = dateFormatterGet.date(from: "2016-02-29") else {return}
-            BookingManager.shared.bookOrCancelSeat(movieName: movieName, date: date, indexPath: indexPath)
+            BookingManager.shared.bookOrCancelSeat(movieName: movieName, date: date, indexPath: indexPath,posterPath: movieModel.poster ?? "")
         }
     }
     

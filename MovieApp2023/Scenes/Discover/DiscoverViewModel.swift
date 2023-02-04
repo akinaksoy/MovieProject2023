@@ -47,7 +47,8 @@ class DiscoverViewModel {
                                                     overview: movie.overview,
                                                     voteAverage: movie.voteAverage,
                                                     adult: movie.adult,
-                                                    relaseDate: movie.releaseDate)
+                                               relaseDate: movie.releaseDate,
+                                               poster: movie.posterPath)
                 if let movieDetail = movieDetail {
                     self.viewController?.navigateToMovieDetail(movieDetail: movieDetail)
                 }

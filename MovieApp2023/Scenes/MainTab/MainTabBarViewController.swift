@@ -15,7 +15,7 @@ class MainTabBarViewController: UITabBarController {
         
         let discoverVC = UINavigationController(rootViewController: DiscoverViewController())
         let searchVC = UINavigationController(rootViewController: DiscoverViewController())
-        let cartVC = UINavigationController(rootViewController: DiscoverViewController())
+        let cartVC = UINavigationController(rootViewController: CartViewController())
         let profileVC = UINavigationController(rootViewController: DiscoverViewController())
         
         discoverVC.tabBarItem.image = UIImage(systemName: "play.tv")

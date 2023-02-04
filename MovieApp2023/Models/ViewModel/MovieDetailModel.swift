@@ -14,4 +14,5 @@ struct MovieDetailModel {
     let voteAverage: Double?
     let adult: Bool?
     let relaseDate : String?
+    let poster : String?
 }
