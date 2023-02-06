@@ -54,6 +54,7 @@
 		1FACD026298EF4E900957351 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACD025298EF4E900957351 /* CartViewController.swift */; };
 		1FACD029298EF73000957351 /* CartOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACD028298EF73000957351 /* CartOrderView.swift */; };
 		1FACD02B298EFAED00957351 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FACD02A298EFAED00957351 /* CartTableViewCell.swift */; };
+		1FB20A00299197E4000FBB32 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB209FF299197E4000FBB32 /* String+Extension.swift */; };
 		1FFF3F612985C2020096E7BC /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F602985C2020096E7BC /* RouterProtocol.swift */; };
 		1FFF3F642985C43F0096E7BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F632985C43F0096E7BC /* BaseViewController.swift */; };
 		1FFF3F662985C6500096E7BC /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF3F652985C6500096E7BC /* ButtonView.swift */; };
@@ -106,6 +107,7 @@
 		1FACD025298EF4E900957351 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		1FACD028298EF73000957351 /* CartOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartOrderView.swift; sourceTree = "<group>"; };
 		1FACD02A298EFAED00957351 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		1FB209FF299197E4000FBB32 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		1FFF3F602985C2020096E7BC /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		1FFF3F632985C43F0096E7BC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1FFF3F652985C6500096E7BC /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				1F9DCC73297DA9DF00B4FAF5 /* UIImageView+Extension.swift */,
 				1F9DCC7A297DC86A00B4FAF5 /* UIView+Extensions.swift */,
 				1F9DCC7C297DC8F200B4FAF5 /* UIStackView+Extension.swift */,
+				1FB209FF299197E4000FBB32 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				0DA1240D297B0078006310F2 /* DiscoverMovieView.swift in Sources */,
 				1F9DCC79297DC70100B4FAF5 /* UILabel+Extensions.swift in Sources */,
 				1F5DC59D298C213E0006AD8A /* BookingManager.swift in Sources */,
+				1FB20A00299197E4000FBB32 /* String+Extension.swift in Sources */,
 				1FACD02B298EFAED00957351 /* CartTableViewCell.swift in Sources */,
 				1F9D66B6297AC18F000B2035 /* MainTabBarViewController.swift in Sources */,
 				0DA12407297AF27A006310F2 /* NetworkConstants.swift in Sources */,

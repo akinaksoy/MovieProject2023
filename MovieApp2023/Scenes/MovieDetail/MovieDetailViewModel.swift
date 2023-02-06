@@ -15,6 +15,9 @@ struct MovieDetailViewModel{
     var dateArray = [Date]()
     var year = 2023
     var dateHours = [String]()
+    var selectedDateString : String?
+    var selectedHourString : String?
+    
     init(viewController : MovieDetailViewController) {
         self.viewController = viewController
     }
@@ -22,6 +25,15 @@ struct MovieDetailViewModel{
     mutating func setDateModels() {
         setCurrentWeekDays()
         setDateHours()
+    }
+    
+    func configureDateBooking() -> Date? {
+        guard let selectedDateString = selectedDateString,let selectedHourString = selectedHourString else {
+            return nil
+        }
+
+        let dateString = "\(selectedDateString) \(selectedHourString)"
+        return dateString.toDate(withDate: dateString)
     }
     
     mutating func setCurrentWeekDays() {

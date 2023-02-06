@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol SelectDateLogic {
+    func didTappedDate(_ dateType : SelectDateTypeView, indexPathRow : Int)
+}
+
+
 class MovieDetailViewController: BaseViewController {
 
     
@@ -49,6 +54,8 @@ class MovieDetailViewController: BaseViewController {
         }
         return button
     }()
+    
+    var dateView : SelectDateView?
     
     let filterButtonStackView = UIStackView().horizontalStackView()
     
@@ -148,6 +155,19 @@ class MovieDetailViewController: BaseViewController {
         navigateToBookingPage()
     }
     
+    func configureDateViewTexts(dateViewType : SelectDateTypeView) {
+        switch dateViewType {
+        case .dateView:
+            if let selectedDate = viewModel.selectedDateString {
+                dateButton.ticketLabel.text = "\(selectedDate)"
+            }
+        case .hourView:
+            if let selectedHour = viewModel.selectedHourString {
+                dateHourButton.ticketLabel.text = "\(selectedHour)"
+            }
+        }
+    }
+    
     private func didTappedDateButton() {
         let dateView = SelectDateView()
         view.addSubview(dateView)
@@ -155,8 +175,8 @@ class MovieDetailViewController: BaseViewController {
             make.edges.equalToSuperview()
         }
         dateView.configure()
-        dateView.setDatas(dateArray: viewModel.dateStringArray, viewType: .dateView)
-        
+        dateView.setDatas(dateArray: viewModel.dateStringArray, viewType: .dateView,delegete: self)
+        self.dateView = dateView
     }
     
     private func didTappedDateHourButton() {
@@ -166,8 +186,8 @@ class MovieDetailViewController: BaseViewController {
             make.edges.equalToSuperview()
         }
         dateView.configure()
-        dateView.setDatas(dateArray: viewModel.dateHours, viewType: .hourView)
-        
+        dateView.setDatas(dateArray: viewModel.dateHours, viewType: .hourView,delegete: self)
+        self.dateView = dateView
     }
     
 }
@@ -176,6 +196,23 @@ extension MovieDetailViewController : NavigateToBookingPageRouterLogic {
     func navigateToBookingPage() {
         let bookingVC = BookingViewController()
         bookingVC.movie = movieDetailModel
+        bookingVC.date = viewModel.configureDateBooking()
         navigationController?.pushViewController(bookingVC, animated: true)
     }
+}
+
+extension MovieDetailViewController : SelectDateLogic {
+    func didTappedDate(_ dateType: SelectDateTypeView, indexPathRow: Int) {
+        dateView?.clearView()
+        switch dateType {
+        case .dateView:
+            viewModel.selectedDateString = "\(viewModel.dateStringArray[indexPathRow])-\(viewModel.year)"
+            didTappedDateHourButton()
+        case .hourView:
+            viewModel.selectedHourString = viewModel.dateHours[indexPathRow]
+        }
+        configureDateViewTexts(dateViewType: dateType)
+    }
+    
+    
 }

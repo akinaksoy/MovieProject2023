@@ -40,6 +40,8 @@ class BookingViewController: BaseViewController {
     let bookingCartView = BookingItemsUIView()
     var movie : MovieDetailModel?
     var viewModel : BookingViewModel?
+    var date : Date?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewModel()

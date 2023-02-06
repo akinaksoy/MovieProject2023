@@ -34,7 +34,8 @@ class SelectDateView: UIView {
     }()
     
     var dates : [String]?
-    
+    var delegete : SelectDateLogic?
+    var viewType : SelectDateTypeView?
     override init(frame: CGRect) {
         super.init(frame: .zero)
         self.backgroundColor = .gray.withAlphaComponent(0.4)
@@ -64,14 +65,20 @@ class SelectDateView: UIView {
             make.bottom.equalTo(viewArea)
         }
     }
-    func setDatas(dateArray : [String],viewType : SelectDateTypeView) {
+    func setDatas(dateArray : [String],viewType : SelectDateTypeView,delegete : SelectDateLogic) {
         dates = dateArray
+        self.delegete = delegete
+        self.viewType = viewType
         switch viewType {
         case .dateView:
             selectText.text = "Select Date"
         case .hourView:
             selectText.text = "Select Hour"
         }
+    }
+    
+    func clearView() {
+        removeFromSuperview()
     }
     
 }
@@ -94,4 +101,8 @@ extension SelectDateView : UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewType = viewType else {return}
+        delegete?.didTappedDate(viewType, indexPathRow: indexPath.row)
+    }
 }
