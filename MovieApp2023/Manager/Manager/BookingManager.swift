@@ -28,23 +28,32 @@ struct BookingManager {
             if var bookingSelectedChair = bookingModel?.selectedChairs,let indexOfBooking = selectedBookingItemIndex  {
                 if let index = bookingSelectedChair.firstIndex(of: indexPath){
                     bookingSelectedChair.remove(at: index)
-                if bookingSelectedChair.count < 1 {
-                    bookingList.remove(at: indexOfBooking)
-                }else {
-                    bookingList[indexOfBooking].selectedChairs = bookingSelectedChair
-                }
+                    if bookingSelectedChair.count < 1 {
+                        bookingList.remove(at: indexOfBooking)
+                    }else {
+                        bookingList[indexOfBooking].selectedChairs = bookingSelectedChair
+                        bookingList[indexOfBooking].price = bookingSelectedChair.count*20
+                    }
                 } else {
                     bookingList[indexOfBooking].selectedChairs?.append(indexPath)
+                    
                 }
             }
-            
         }
         else {
             let selectedChairs = [indexPath]
-            let bookingModel = BookingSeatModel(title: movieName, date: date, selectedChairs: selectedChairs, price: 20,poster: posterPath)
+            let bookingModel = BookingSeatModel(title: movieName, date: date, selectedChairs: selectedChairs, price: 0,poster: posterPath)
             self.bookingList.append(bookingModel)
         }
-        print(bookingList)
+        calculatePrices()
+    }
+    
+    mutating func calculatePrices() {
+        for (index,bookingItem) in bookingList.enumerated() {
+            guard let selectedItems = bookingItem.selectedChairs else {return}
+            let selectedChairPrice = selectedItems.count*20
+            bookingList[index].price = selectedChairPrice
+        }
     }
     
     
@@ -73,6 +82,14 @@ struct BookingManager {
         {isElementExist = true}
         
         return isElementExist
+    }
+    
+    func configureSeatTexts(indexPath : [IndexPath])-> String{
+        var seatTexts = ""
+        for indexPath in indexPath {
+            seatTexts += indexPath.toSeatString()
+        }
+        return seatTexts
     }
     
 }

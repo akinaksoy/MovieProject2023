@@ -11,6 +11,6 @@ struct BookingSeatModel {
     let title : String?
     let date : Date?
     var selectedChairs : [IndexPath]?
-    let price : Int?
+    var price : Int?
     let poster : String?
 }

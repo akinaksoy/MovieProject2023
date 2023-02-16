@@ -48,7 +48,7 @@ class CartTableViewCell: UITableViewCell {
         
         movieNameLabel.snp.makeConstraints { make in
             make.top.equalTo(image)
-            make.left.equalTo(image.snp_rightMargin)
+            make.left.equalTo(image.snp_rightMargin).offset(8)
             make.right.equalToSuperview().inset(8)
         }
         
@@ -61,6 +61,16 @@ class CartTableViewCell: UITableViewCell {
         totalPriceLabel.snp.makeConstraints { make in
             make.right.bottom.equalToSuperview()
         }
+        
+    }
+    
+    func setDatas(imageString : String?,movieName : String,seatLabelIndexes : [IndexPath], price : String) {
+        if let imageString = imageString {
+            image.setImage(imageUrl: imageString)
+        }
+        movieNameLabel.text = movieName
+        seatLabel.text = BookingManager.shared.configureSeatTexts(indexPath: seatLabelIndexes)
+        totalPriceLabel.text = "\(price) $"
         
     }
     

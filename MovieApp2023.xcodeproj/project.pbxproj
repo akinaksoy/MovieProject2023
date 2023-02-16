@@ -17,6 +17,8 @@
 		1F5DC59F298C21810006AD8A /* BookingSeatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DC59E298C21810006AD8A /* BookingSeatModel.swift */; };
 		1F5DC5A3298D99F50006AD8A /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DC5A2298D99F50006AD8A /* SelectDateView.swift */; };
 		1F5DC5A5298D9B2B0006AD8A /* SelectDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DC5A4298D9B2B0006AD8A /* SelectDateTableViewCell.swift */; };
+		1F622D16299EE66900DAF1B5 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F622D15299EE66900DAF1B5 /* CartViewModel.swift */; };
+		1F622D18299EE83C00DAF1B5 /* IndexPath+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F622D17299EE83C00DAF1B5 /* IndexPath+Extension.swift */; };
 		1F68AF99298AA1E200621A99 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68AF98298AA1E200621A99 /* BookingViewController.swift */; };
 		1F68AF9D298AA6CF00621A99 /* BookingSeatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */; };
 		1F98A73B298AFFBD000574D1 /* SeatStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98A73A298AFFBD000574D1 /* SeatStatusView.swift */; };
@@ -71,6 +73,8 @@
 		1F5DC59E298C21810006AD8A /* BookingSeatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSeatModel.swift; sourceTree = "<group>"; };
 		1F5DC5A2298D99F50006AD8A /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
 		1F5DC5A4298D9B2B0006AD8A /* SelectDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateTableViewCell.swift; sourceTree = "<group>"; };
+		1F622D15299EE66900DAF1B5 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		1F622D17299EE83C00DAF1B5 /* IndexPath+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+Extension.swift"; sourceTree = "<group>"; };
 		1F68AF98298AA1E200621A99 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		1F68AF9C298AA6CF00621A99 /* BookingSeatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSeatsTableViewCell.swift; sourceTree = "<group>"; };
 		1F98A73A298AFFBD000574D1 /* SeatStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatStatusView.swift; sourceTree = "<group>"; };
@@ -301,6 +305,7 @@
 				1F9DCC7A297DC86A00B4FAF5 /* UIView+Extensions.swift */,
 				1F9DCC7C297DC8F200B4FAF5 /* UIStackView+Extension.swift */,
 				1FB209FF299197E4000FBB32 /* String+Extension.swift */,
+				1F622D17299EE83C00DAF1B5 /* IndexPath+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				1FACD025298EF4E900957351 /* CartViewController.swift */,
+				1F622D15299EE66900DAF1B5 /* CartViewModel.swift */,
 			);
 			path = CartPage;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 				1F9D66B6297AC18F000B2035 /* MainTabBarViewController.swift in Sources */,
 				0DA12407297AF27A006310F2 /* NetworkConstants.swift in Sources */,
 				1FFF3F642985C43F0096E7BC /* BaseViewController.swift in Sources */,
+				1F622D18299EE83C00DAF1B5 /* IndexPath+Extension.swift in Sources */,
 				1FACD026298EF4E900957351 /* CartViewController.swift in Sources */,
 				1F9FF83D297F1DA900DF0ECD /* Constants.swift in Sources */,
 				0DA12410297B00C6006310F2 /* MovieTitleView.swift in Sources */,
@@ -515,6 +522,7 @@
 				1F5DC59B298C201B0006AD8A /* BookingViewModel.swift in Sources */,
 				1F98A73B298AFFBD000574D1 /* SeatStatusView.swift in Sources */,
 				0DA12409297AF66D006310F2 /* Movie.swift in Sources */,
+				1F622D16299EE66900DAF1B5 /* CartViewModel.swift in Sources */,
 				1F9FF83F297F1DD800DF0ECD /* MovieDetailViewModel.swift in Sources */,
 				1F68AF99298AA1E200621A99 /* BookingViewController.swift in Sources */,
 				1F9FF839297F1CEE00DF0ECD /* YoutubeService.swift in Sources */,

@@ -37,7 +37,7 @@ class BookingViewController: BaseViewController {
     
     let seatHorizantalView = UIStackView().horizontalStackView()
     
-    let bookingCartView = BookingItemsUIView()
+    var bookingCartView = BookingItemsUIView()
     var movie : MovieDetailModel?
     var viewModel : BookingViewModel?
     var date : Date?
@@ -101,12 +101,32 @@ class BookingViewController: BaseViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide)
             make.width.equalToSuperview()
         }
+        
+        bookingCartView.addToCartButton.didTapButton = {
+            self.didTapAddToCartButton()
+        }
+        
     }
     
     private func configureSeatViews() {
         selectedView.configure(chairStatus: .selectedChair)
         availableView.configure(chairStatus: .availableChair)
         reservedView.configure(chairStatus: .reservedChair)
+    }
+    
+    @objc func didTapAddToCartButton() {
+        viewModel?.bookOrCancelSeat()
+        navigationController?.popToRootViewController(animated: false)
+        
+    }
+    
+    func setSelectedChairAndPrice() {
+        let selectedChair = BookingManager.shared.configureSeatTexts(indexPath: viewModel?.selectedSeatIndexes ?? [])
+        bookingCartView.selectedChairRightValueLabel.text = selectedChair
+        if let selectedChairCount = viewModel?.selectedSeatIndexes.count{
+            let totalPrice = selectedChairCount*20
+            bookingCartView.priceRightValueLabel.text = "\(totalPrice)$"
+        }
     }
     
 }
@@ -116,9 +136,8 @@ extension BookingViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? BookingSeatsCollectionViewCell {
             collectionView.reloadInputViews()
-            
-            viewModel?.bookOrCancelSeat(indexPath: indexPath)
-            
+            viewModel?.selectSeatIndexes(indexPath: indexPath)
+            setSelectedChairAndPrice()
             let isChairSelected = viewModel?.checkSeatStatus(indexPath: indexPath) ?? false
             cell.didTapSeat(isChairSelected: isChairSelected )
         }

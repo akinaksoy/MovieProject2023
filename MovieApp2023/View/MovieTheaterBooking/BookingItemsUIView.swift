@@ -29,6 +29,8 @@ class BookingItemsUIView: UIView {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
+        selectedChairRightValueLabel.numberOfLines = 1
+        
         self.addSubview(view)
         self.addSubview(selectedChairLeftLabel)
         self.addSubview(selectedChairRightValueLabel)
